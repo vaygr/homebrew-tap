@@ -19,8 +19,9 @@ class Newsraft < Formula
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/newsraft -v")
+    assert_match version.to_s, shell_output("#{bin}/newsraft -v 2>&1")
 
-    assert_match "Failed to load feeds file", shell_output("#{bin}/newsraft 2>&1")
+    system "#{bin}/newsraft -l test 2>&1 || :"
+    assert_match "Trying to initialize curses library...", File.read("test")
   end
 end
