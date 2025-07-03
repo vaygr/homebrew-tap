@@ -9,7 +9,8 @@ cask "filefillet" do
   homepage "https://www.filefillet.com/"
 
   livecheck do
-    skip "No version information available"
+    url "https://release.filefillet.com/appcast.xml"
+    strategy :sparkle, &:short_version
   end
 
   depends_on macos: ">= :sonoma"
