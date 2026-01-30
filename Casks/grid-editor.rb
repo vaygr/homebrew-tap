@@ -1,9 +1,9 @@
 cask "grid-editor" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.6.2"
-  sha256 arm:   "d9f0662e35a8feb66c87f4379d1714d3e249408ea430352c1987f95d4ad3e8a0",
-         intel: "195924a3135fa08e1e1cd6cb4c7c124a55871c2055f61030b2c2c6f8c47061b8"
+  version "1.6.5"
+  sha256 arm:   "88453cf0176779b0e0a2e672dc5f97a5be59af30c6c171f02fb5635bc08ca5db",
+         intel: "18710ce4ed8ce4377b381ef96bdedc7f5d7437ce076daeba3866590fec388aad"
 
   url "https://github.com/intechstudio/grid-editor/releases/download/v#{version}/grid-editor-macos-#{version}-#{arch}.dmg",
       verified: "github.com/intechstudio/grid-editor"
@@ -18,7 +18,7 @@ cask "grid-editor" do
 
   depends_on macos: ">= :high_sierra"
 
-  app "Grid Editor.app"
+  app "grid-editor.app"
 
   zap trash: [
     "~/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/intechstudio.grid-editor.app.sfl3",
